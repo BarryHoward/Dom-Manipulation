@@ -31,10 +31,6 @@ var typeOP = function(character){
 			clearTx();
 			var stringArray = tempString.split('+');
 			textBox.value = Number(stringArray[0]) + Number(stringArray[1]);
-		} else if(tempString.includes('-')){
-			clearTx();
-			var stringArray = tempString.split('-');
-			textBox.value = Number(stringArray[0]) - Number(stringArray[1]);
 		} else if(tempString.includes('/')){
 			clearTx();
 			var stringArray = tempString.split('/');
@@ -43,8 +39,16 @@ var typeOP = function(character){
 			clearTx();
 			var stringArray = tempString.split('*');
 			textBox.value = Number(stringArray[0]) * Number(stringArray[1]);
+		} else if(tempString.includes('-')){
+			clearTx();
+			var stringArray = tempString.split('-');
+			if (tempString[0]==="-"){
+				textBox.value = -1 * Number(stringArray[1]) - Number(stringArray[2]);
+				console.log("branch");
+			} else {
+				textBox.value = Number(stringArray[0]) - Number(stringArray[1]);
+			}
 		}
-
 	}
 	if (character !== "="){
 		textBox.value += character;
