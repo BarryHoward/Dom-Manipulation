@@ -2,9 +2,6 @@
 var button = document.getElementById("calculate-button");
 var answer = document.getElementById("answer");
 
-console.log(button);
-console.log(answer);
-
 var testf = function(event){
 	event.preventDefault();
 	var textBox1 = document.getElementById("value-one");
