@@ -21,7 +21,7 @@ input {
 	border: .5px, solid, #7FC073;
 	font-family: 'Open Sans', sans-serif;
 	height: 70px;
-	width: 210px;
+	width: 190px;
 	font-size: 25pt;
 	background: lightgrey;
 	display: inline-block;
@@ -30,6 +30,8 @@ input {
 	padding: 0px;
 	border: 0px;
 	margin: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
 	background: #65B256;
 	color: white;
 }
