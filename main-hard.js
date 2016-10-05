@@ -41,11 +41,12 @@ var typeOP = function(character){
 			textBox.value = Number(stringArray[0]) * Number(stringArray[1]);
 		} else if(tempString.includes('-')){
 			clearTx();
-			var stringArray = tempString.split('-');
 			if (tempString[0]==="-"){
-				textBox.value = -1 * Number(stringArray[1]) - Number(stringArray[2]);
-				console.log("branch");
+				tempString=tempString.slice(1, tempString.length-1);
+				var stringArray = tempString.split('-');
+				textBox.value = -1 * Number(stringArray[0]) - Number(stringArray[1]);
 			} else {
+				var stringArray = tempString.split('-');
 				textBox.value = Number(stringArray[0]) - Number(stringArray[1]);
 			}
 		}
