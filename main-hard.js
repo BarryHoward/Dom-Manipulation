@@ -30,18 +30,18 @@ button7.addEventListener("click", function () {addNum("7")});
 button8.addEventListener("click", function () {addNum("8")});
 button9.addEventListener("click", function () {addNum("9")});
 buttonDec.addEventListener("click", function () {addNum(".")});
-buttonAdd.addEventListener("click", function () {typeOP("+")});
-buttonSub.addEventListener("click", function () {typeOP("-")});
-buttonMult.addEventListener("click", function () {typeOP("*")});
-buttonDiv.addEventListener("click", function () {typeOP("/")});
+buttonAdd.addEventListener("click", function () {computeOP("+")});
+buttonSub.addEventListener("click", function () {computeOP("-")});
+buttonMult.addEventListener("click", function () {computeOP("*")});
+buttonDiv.addEventListener("click", function () {computeOP("/")});
 buttonC.addEventListener("click", function() {clearTx()});
-buttonEqu.addEventListener("click", function() {typeOP("=")});
+buttonEqu.addEventListener("click", function() {computeOP("=")});
 
 var addNum = function (character) {
 	textBox.value += character;
 }
 
-var typeOP = function (character){
+var computeOP = function (character){
 	var tempString = textBox.value;
 	if (tempString.includes('+') || tempString.includes('*') || (tempString.includes('-') && tempString[0] != "-" )|| tempString.includes('/') ){
 		if(tempString.includes('+')){
