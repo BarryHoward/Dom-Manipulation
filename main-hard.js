@@ -43,27 +43,25 @@ var addNum = function (character) {
 
 var computeOP = function (character){
 	var tempString = textBox.value;
+	var stringArray;
 	if (tempString.includes('+') || tempString.includes('*') || (tempString.includes('-') && tempString[0] != "-" )|| tempString.includes('/') ){
+		clearTx();
 		if(tempString.includes('+')){
-			clearTx();
-			var stringArray = tempString.split('+');
+			stringArray = tempString.split('+');
 			textBox.value = Number(stringArray[0]) + Number(stringArray[1]);
 		} else if(tempString.includes('/')){
-			clearTx();
-			var stringArray = tempString.split('/');
+			stringArray = tempString.split('/');
 			textBox.value = Number(stringArray[0]) / Number(stringArray[1]);
 		} else if(tempString.includes('*')){
-			clearTx();
-			var stringArray = tempString.split('*');
+			stringArray = tempString.split('*');
 			textBox.value = Number(stringArray[0]) * Number(stringArray[1]);
 		} else if(tempString.includes('-')){
-			clearTx();
 			if (tempString[0]==="-"){
 				tempString=tempString.slice(1, tempString.length);
-				var stringArray = tempString.split('-');
+				stringArray = tempString.split('-');
 				textBox.value = (-1 * Number(stringArray[0])) - Number(stringArray[1]);
 			} else {
-				var stringArray = tempString.split('-');
+				stringArray = tempString.split('-');
 				textBox.value = Number(stringArray[0]) - Number(stringArray[1]);
 			}
 		}
