@@ -42,9 +42,11 @@ var typeOP = function(character){
 		} else if(tempString.includes('-')){
 			clearTx();
 			if (tempString[0]==="-"){
-				tempString=tempString.slice(1, tempString.length-1);
+				tempString=tempString.slice(1, tempString.length);
+				console.log(tempString);
 				var stringArray = tempString.split('-');
-				textBox.value = -1 * Number(stringArray[0]) - Number(stringArray[1]);
+				console.log(stringArray);
+				textBox.value = (-1 * Number(stringArray[0])) - Number(stringArray[1]);
 			} else {
 				var stringArray = tempString.split('-');
 				textBox.value = Number(stringArray[0]) - Number(stringArray[1]);
