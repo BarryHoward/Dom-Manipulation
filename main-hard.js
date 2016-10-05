@@ -43,9 +43,7 @@ var typeOP = function(character){
 			clearTx();
 			if (tempString[0]==="-"){
 				tempString=tempString.slice(1, tempString.length);
-				console.log(tempString);
 				var stringArray = tempString.split('-');
-				console.log(stringArray);
 				textBox.value = (-1 * Number(stringArray[0])) - Number(stringArray[1]);
 			} else {
 				var stringArray = tempString.split('-');
